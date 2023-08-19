@@ -45,7 +45,8 @@ struct ContentView: View {
         ["ま", "み", "む", "め", "も"],
         ["や", "", "ゆ", "", "よ"],
         ["ら", "り", "る", "れ", "ろ"],
-        ["わ", "", "を", "", "ん"]
+        ["わ", "", "を", "", "ん"],
+        ["゛", "゜", "ー", "", ""]
     ]
 
     let symbolList = ["1", "2", "3", "4", "5", "6", " 7", "8", "9", "0"]
@@ -176,7 +177,6 @@ struct ContentView: View {
                             .cornerRadius(8.0)
                         }
                     }
-                    .frame(width: .infinity, height: .infinity)
                     HStack(spacing: 5) {
                         // 二次元配列を基にしたボタン群
                         ForEach(charList.indices.reversed(), id: \.self) { rowIndex in
